@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    DocumentRoot {{ librenms_path }}/html/
+    ServerName  {{ ansible_fqdn }}
+    CustomLog {{ librenms_path }}/logs/access_log combined
+    ErrorLog {{ librenms_path }}/logs/error_log
+    AllowEncodedSlashes NoDecode
+
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+    <Directory "{{ librenms_path }}/html/">
+        AllowOverride All
+        Options FollowSymLinks MultiViews
+        Require all granted
+    </Directory>
+</VirtualHost>
