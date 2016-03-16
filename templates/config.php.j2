@@ -46,6 +46,18 @@ $config['poller_modules']['{{ poller }}'] = 0;
 $config['rancid_configs'][] = "{{ path }}";
 {% endfor %}
 
+{% if librenms_collectd_dir %}
+# COLLECTD
+$config['collectd_dir']     = "{{ librenms_collectd_dir }}";
+$config['collectd_sock']    = "{{ librenms_collectd_sock }}";
+{% endif %}
+
+{% if librenms_smokeping_dir %}
+# SMOKEPING
+$config['smokeping']['dir']   = "{{ librenms_smokeping_dir }}";
+$config['smokeping']['pings'] = {{ librenms_smokeping_pings }};
+{% endif %}
+
 # SERVICES
 $config['show_services']  = {{ librenms_services_enable|int }};
 $config['nagios_plugins'] = "{{ librenms_nagios_plugins }}";

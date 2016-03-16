@@ -53,6 +53,12 @@ librenms_pollers_disabled: []
 #
 librenms_rancid_configs: []
 #
+librenms_collectd_dir: /var/lib/collectd/rrd
+librenms_collectd_sock: unix:///var/run/collectd.sock
+#
+librenms_smokeping_dir: /var/lib/smokeping
+librenms_smokeping_pings: 20
+#
 librenms_rrdcached_socket: unix:/var/run/rrdcached.sock
 librenms_rrdcached_journal: /var/lib/rrdcached/journal/
 librenms_rrdcached_pidfile: /var/run/rrdcached.pid
