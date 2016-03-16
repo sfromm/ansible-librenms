@@ -84,14 +84,6 @@ $config['email_smtp_secure']   = "{{ librenms_email_smtp_secure }}";
 $config['email_smtp_username'] = "{{ librenms_email_smtp_username }}";
 $config['email_smtp_password'] = "{{ librenms_email_smtp_password }}";
 
-$config['alerts']['email']['default']      = "{{ librenms_alerts_email_default }}";
-$config['alerts']['email']['default_only'] = "{{ librenms_alerts_email_default_only }}";
-$config['alerts']['email']['enable']       = "{{ librenms_alerts_email_enable }}";
-
-$config['alert']['globals']    = {{ librenms_alert_globals }};
-$config['alert']['admins']     = {{ librenms_alert_admins }};
-$config['alert']['syscontact'] = {{ librenms_alert_syscontact }};
-
 {% if librenms_alerts_bgp_whitelist %}
 {% for asn in librenms_alerts_bgp_whitelist %}
 $config['alerts']['bgp']['whitelist'][]    = "{{ asn }}";

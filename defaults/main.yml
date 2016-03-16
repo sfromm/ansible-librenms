@@ -40,9 +40,6 @@ librenms_email_smtp_secure: "FALSE"
 librenms_email_smtp_username: "NULL"
 librenms_email_smtp_password: "NULL"
 #
-librenms_alerts_email_default: root@localhost
-librenms_alerts_email_default_only: "FALSE"
-librenms_alerts_email_enable: "TRUE"
 librenms_alerts_bgp_whitelist: []
 librenms_alerts_port_ifdown: "FALSE"
 #
