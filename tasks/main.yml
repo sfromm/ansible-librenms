@@ -126,3 +126,5 @@
     group=root
     mode=0644
     backup=yes
+
+- include: devices.yml
