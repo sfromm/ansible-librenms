@@ -13,7 +13,7 @@
   user: >-
     name={{ librenms_user }}
     home={{ librenms_path }}
-    groups=apache
+    groups={{ librenms_user_groups }}
     system=yes
     createhome=no
     state=present

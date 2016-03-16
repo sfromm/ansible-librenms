@@ -3,6 +3,7 @@ rpmforge_release: 0.5.3-1.el7
 librenms_path: /opt/librenms
 librenms_fping: /usr/sbin/fping
 librenms_user: librenms
+librenms_user_groups: apache
 librenms_git_url: https://github.com/librenms/librenms.git
 librenms_devices: []
 #
