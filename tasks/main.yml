@@ -110,12 +110,6 @@
     creates={{ librenms_path }}/logs/schema.log
     php {{ librenms_path }}/build-base.php > {{ librenms_path }}/logs/schema.log 2>&1
 
-- name: template librenms httpd config
-  template: >-
-    src=librenms.conf.j2
-    dest=/etc/httpd/conf.d/librenms.conf
-  notify: restart apache
-
 - name: template librenms crontab
   template: >-
     src=librenms.cron.j2

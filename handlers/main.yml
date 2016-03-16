@@ -1,6 +1,3 @@
 ---
-- name: restart apache
-  service: name=httpd state=restarted
-
 - name: restart rrdcached
   service: name=rrdcached state=restarted
