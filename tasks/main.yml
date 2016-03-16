@@ -61,6 +61,14 @@
     - 127.0.0.1
     - localhost
 
+- name: create my.cnf for librenms
+  template: >-
+    src=my.cnf.j2
+    dest={{ librenms_path }}/.my.cnf
+    owner={{ librenms_user }}
+    group={{ librenms_user }}
+    backup=yes
+
 - name: template librenms configuration
   template: >-
     src=config.php.j2
