@@ -84,7 +84,7 @@
     owner={{ item.owner }}
     group={{ item.group }}
     mode={{ item.mode }}
-  with_items: librenms_directories
+  with_items: "{{ librenms_directories }}"
   register: librenms_dirs
 
 - name: create librenms apache logs

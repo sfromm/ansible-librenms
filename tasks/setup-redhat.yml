@@ -4,4 +4,4 @@
 
 - name: install prerequisites
   yum: name={{ item }} state=installed
-  with_items: librenms_packages
+  with_items: "{{ librenms_packages }}"

@@ -10,5 +10,5 @@
     chdir={{ librenms_path }}
     php addhost.php {{ item }}
   sudo_user: "{{ librenms_user }}"
-  with_items: librenms_devices
+  with_items: "{{ librenms_devices }}"
   when: item not in librenms_discovered_devices.stdout_lines
